@@ -1,0 +1,51 @@
+import React from "react";
+import { useState, useEffect } from "react";
+export default function RandomImages() {
+  const [image, setImage] = useState([]);
+  const [dogName, setDogName] = useState("...");
+  const [clicked, setClicked] = useState(false);
+  function getRandomImage() {
+    fetch("https://dog.ceo/api/breeds/image/random")
+      .then((response) => {
+        return response.json();
+      })
+      .then((json) => {
+        setImage(json);
+      })
+      .then(() => {
+        setTimeout(() => {
+          console.log(" hi", image, "  image");
+          let url = image.message;
+          const arr = url.split("/");
+          console.log(arr);
+          setDogName(arr[4]);
+        }, 3000);
+        // setDogName();
+      })
+      .catch((err) => {
+        alert(err);
+      });
+  }
+
+  useEffect(() => {
+    getRandomImage();
+  }, [clicked]);
+
+  function handleClick() {
+    setClicked(!clicked);
+    // console.log(arr[4]);
+  }
+  return (
+    <div className="header">
+      <h3>Get random doggo</h3>
+      {
+        <div>
+          <img src={image.message} alt="failed" width={"400px"} />
+          <p>Random image of {dogName}</p>
+        </div>
+      }
+      <br></br>
+      <button onClick={handleClick}>Click for more</button>
+    </div>
+  );
+}
