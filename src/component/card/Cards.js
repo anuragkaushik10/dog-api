@@ -2,7 +2,7 @@ import React from "react";
 import Card from "react-bootstrap/Card";
 import CardGroup from "react-bootstrap/CardGroup";
 // import Button from "react-bootstrap/B";
-export default function Cards({ image1, image2, image3 }) {
+export default function Cards({ image1, image2, image3, name1, name2, name3 }) {
   return (
     <div>
       <CardGroup
@@ -15,7 +15,7 @@ export default function Cards({ image1, image2, image3 }) {
             style={{ width: "100%", height: "90%", borderRadius: "10px" }}
           />
           <Card.Body>
-            <Card.Title>Card title</Card.Title>
+            <Card.Title>{name1}</Card.Title>
           </Card.Body>
         </Card>
 
@@ -26,7 +26,7 @@ export default function Cards({ image1, image2, image3 }) {
             style={{ width: "100%", height: "90%", borderRadius: "10px" }}
           />
           <Card.Body>
-            <Card.Title>Card title</Card.Title>
+            <Card.Title>{name2}</Card.Title>
           </Card.Body>
         </Card>
 
@@ -37,7 +37,7 @@ export default function Cards({ image1, image2, image3 }) {
             style={{ width: "100%", height: "90%", borderRadius: "10px" }}
           />
           <Card.Body>
-            <Card.Title>Card title</Card.Title>
+            <Card.Title>{name3}</Card.Title>
           </Card.Body>
         </Card>
       </CardGroup>

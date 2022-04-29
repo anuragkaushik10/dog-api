@@ -8,8 +8,20 @@ export default function Grid() {
   function fetchData() {
     fetch("https://dog.ceo/api/breeds/image/random/3")
       .then((response) => response.json())
-      .then((json) => setUrl(json.message));
+      .then((json) => {
+        setUrl(json.message);
+        let res = url.map((u) => u);
+        let n = [];
+        for (let i = 0; i < res.length; i++) {
+          let arr = res[i].split("/");
+          // console.log(arr[4]);
+          n.push(arr[4]);
+        }
+        // console.log(n);
+        setNames(n);
+      });
   }
+  console.log(names);
   function handleClick() {
     setClick(!click);
   }
@@ -17,7 +29,7 @@ export default function Grid() {
     fetchData();
   }, [click]);
 
-  console.log(url);
+  // console.log(url);
   return (
     <div className="header">
       <h1
@@ -29,7 +41,14 @@ export default function Grid() {
       >
         Create a grid image
       </h1>
-      <Cards image1={url[0]} image2={url[1]} image3={url[2]} />
+      <Cards
+        image1={url[0]}
+        image2={url[1]}
+        image3={url[2]}
+        name1={names[0]}
+        name2={names[1]}
+        name3={names[2]}
+      />
       <Button
         onClick={handleClick}
         style={{ marginBottom: "50px" }}
