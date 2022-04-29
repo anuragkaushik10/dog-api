@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Schoolbell&display=swap');
 
 .header{
   text-align: center;
@@ -5,4 +6,12 @@
 
 .header > h1{
   font-size:50px
+}
+
+
+body {
+  margin: 0;
+  font-family: 'Schoolbell', cursive;
+  font-weight: 600;
+  background-color:lightyellow
 }
