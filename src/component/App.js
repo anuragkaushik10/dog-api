@@ -8,8 +8,13 @@ function App() {
   return (
     <div className="App">
       <Header />
+      <br></br>
       <RandomImages />
+      <br></br>
+
       <Dropdown />
+      <br></br>
+
       <Grid />
     </div>
   );

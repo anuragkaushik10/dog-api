@@ -1,5 +1,4 @@
 import React from "react";
-import { FormControl, Select, MenuItem, InputLabel } from "@mui/material";
 import Button from "react-bootstrap/Button";
 export default function DropdownMenu() {
   const [dogs, setDogs] = React.useState([]);
@@ -37,7 +36,15 @@ export default function DropdownMenu() {
   console.log(dogUrl);
   return (
     <div className="header">
-      <h1>Select from dropdown </h1>
+      <h1
+        style={{
+          color: "#B63667",
+          textDecoration: "underline",
+          fontSize: "40px",
+        }}
+      >
+        Select from dropdown{" "}
+      </h1>
       <div>
         <select
           name="dogs"
@@ -52,7 +59,7 @@ export default function DropdownMenu() {
         <br></br>
         <img src={dogUrl} alt={dogName} width={"40%"} />
       </div>
-      <h3>{dogName}</h3>
+      <h3>Image of {dogName}</h3>
       <br></br>
       <Button onClick={getMore}>More from this breed please!</Button>
     </div>

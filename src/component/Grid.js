@@ -20,7 +20,15 @@ export default function Grid() {
   console.log(url);
   return (
     <div className="header">
-      <h1>Create a grid image</h1>
+      <h1
+        style={{
+          color: "#359A90",
+          textDecoration: "underline",
+          fontSize: "40px",
+        }}
+      >
+        Create a grid image
+      </h1>
       <Cards image1={url[0]} image2={url[1]} image3={url[2]} />
       <Button
         onClick={handleClick}

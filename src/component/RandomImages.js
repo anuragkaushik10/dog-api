@@ -24,11 +24,19 @@ export default function RandomImages() {
   }
   return (
     <div className="header">
-      <h3>Get random doggo</h3>
+      <h1
+        style={{
+          color: "#9A8F2E",
+          textDecoration: "underline",
+          fontSize: "40px",
+        }}
+      >
+        Get random doggo
+      </h1>
       {
         <div>
           <img src={image.message} alt="failed" width={"40%"} />
-          <p>Random image of {dogName}</p>
+          <h3>Random image of {dogName}</h3>
         </div>
       }
       <Button onClick={handleClick}>Click for more</Button>

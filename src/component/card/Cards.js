@@ -8,7 +8,7 @@ export default function Cards({ image1, image2, image3 }) {
       <CardGroup
         style={{ margin: "50px 100px 30px 100px", borderRadius: "10px" }}
       >
-        <Card style={{ padding: "30px" }}>
+        <Card style={{ padding: "30px", backgroundColor: "#F1ECCE" }}>
           <Card.Img
             variant="top"
             src={image1}
@@ -19,7 +19,7 @@ export default function Cards({ image1, image2, image3 }) {
           </Card.Body>
         </Card>
 
-        <Card style={{ padding: "30px" }}>
+        <Card style={{ padding: "30px", backgroundColor: "#F1ECCE" }}>
           <Card.Img
             variant="top"
             src={image2}
@@ -30,7 +30,7 @@ export default function Cards({ image1, image2, image3 }) {
           </Card.Body>
         </Card>
 
-        <Card style={{ padding: "30px" }}>
+        <Card style={{ padding: "30px", backgroundColor: "#F1ECCE" }}>
           <Card.Img
             variant="top"
             src={image3}
