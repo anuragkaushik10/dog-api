@@ -3,7 +3,7 @@ import Header from "./Header";
 import RandomImages from "./RandomImages";
 import Dropdown from "./Dropdown";
 import Grid from "./Grid";
-
+import "../index.css";
 function App() {
   return (
     <div className="App">
